@@ -1,7 +1,10 @@
 import csv
 
 with open("space.csv", encoding = 'utf-8') as file:
+    #создание списка
     reader = list(csv.DictReader(file, delimiter='*'))
+
+    #сортировка
     for i in range(len(reader)):
         j = i-1
         key = reader[i]
@@ -9,6 +12,7 @@ with open("space.csv", encoding = 'utf-8') as file:
             reader[j+1] = reader[j]
         reader[j+1] = key
 
+    #вывод необходимого кол-ва кораблей
     count = 1
     for ship in reader:
         ship_name = ship['ShipName']

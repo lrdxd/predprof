@@ -5,6 +5,7 @@ with open("space.csv", encoding='utf-8') as file:
     reader = list(csv.DictReader(file, delimiter='*',quotechar='"'))
 
     ship_id = input()
+
     #поиск корабля в словаре
     while ship_id != "stop":
         for ship in reader:
