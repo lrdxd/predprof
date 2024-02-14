@@ -1,9 +1,8 @@
 import csv
 
-with open("space.txt", encoding = 'utf-8') as file:
+with open("space.csv", encoding = 'utf-8') as file:
     reader = list(csv.DictReader(file, delimiter='*'))
-    print(reader["Shipname"])
-    '''for i in range(len(reader)):
+    for i in range(len(reader)):
         j = i-1
         key = reader[i]
         while int(reader[j]['ShipName'][4:]) < int(key['ShipName'][4:]) and j >= 0:
@@ -16,4 +15,4 @@ with open("space.txt", encoding = 'utf-8') as file:
         print(ship_name)
         count += 1
         if count == 10:
-            break'''
+            break
